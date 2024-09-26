@@ -8,6 +8,7 @@
 * สามารถมีเมธอดที่มีการใช้งาน (concrete methods) และเมธอดที่ไม่มีการใช้งาน (abstract methods)
 * ซับคลาสต้อง implement เมธอดนามธรรมที่ประกาศในคลาสนามธรรม
 
+{% code title="Java" %}
 ```java
 abstract class Animal {
     Animal() {
@@ -21,7 +22,9 @@ abstract class Animal {
     }
 }
 ```
+{% endcode %}
 
+{% code title="C++" %}
 ```cpp
 class Animal {
 public:
@@ -37,7 +40,9 @@ public:
 };
 C++ จะใช้การประกาศเมธอดด้วย = 0 เพื่อทำให้เมธอดเป็น abstract:
 ```
+{% endcode %}
 
+{% code title="Python" %}
 ```python
 class Animal(ABC):
     def __init__(self):
@@ -47,6 +52,11 @@ class Animal(ABC):
     def sound(self):  
         pass
 ```
+{% endcode %}
+
+
+
+#### หลักการสร้าง
 
 * ใน Java คลาสที่เป็น abstract class ถูกประกาศด้วยคำว่า `abstract`
 * ใน C++ การทำให้เมธอดเป็นนามธรรมใช้การกำหนด `= 0` และคลาสที่มีเมธอดเช่นนี้เรียกว่า "pure virtual class" ซึ่งทำหน้าที่เป็นแม่แบบเช่นเดียวกับ abstract class ใน Java
